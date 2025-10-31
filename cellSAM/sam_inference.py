@@ -7,7 +7,7 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 from torchvision.transforms.functional import resize, to_pil_image
-from torchvision import datapoints
+from torchvision import tv_tensors as datapoints
 
 from .AnchorDETR.models import build_inference_model
 from segment_anything import (
