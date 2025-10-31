@@ -66,7 +66,7 @@ def get_model(model: nn.Module = None) -> nn.Module:
                 model_path,
             )
         model = CellSAM(config)
-        model.load_state_dict(torch.load(model_path, map_location="cpu"))
+        model.load_state_dict(torch.load(model_path, map_location="cpu", weights_only=False))
     return model
 
 
